@@ -5,10 +5,18 @@
 .idea/
 
 # General
-build/
 *.iml
 *.g.dart
 *.freezed.dart
 
-# Keep the release APK
-!/build/app/outputs/flutter-apk/app-release.apk
+# Ignore all content in the build directory...
+build/*
+
+# ...except for the release APK
+!build/app/
+build/app/*
+!build/app/outputs/
+build/app/outputs/*
+!build/app/outputs/flutter-apk/
+build/app/outputs/flutter-apk/*
+!build/app/outputs/flutter-apk/app-release.apk
