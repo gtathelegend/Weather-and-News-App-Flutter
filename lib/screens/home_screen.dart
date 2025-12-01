@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -16,6 +18,36 @@ class HomeScreen extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
+            const Text(
+              'Welcome to the Weather and News App!',
+              textAlign: TextAlign.center,
+              style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+            ),
+            const SizedBox(height: 16),
+            const Text(
+              'This app is made by Vedaang Sharma. You can view weather for your city by searching it in the search bar and also view news headlines. Thanks for using it.',
+              textAlign: TextAlign.center,
+              style: TextStyle(fontSize: 16),
+            ),
+            const SizedBox(height: 32),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                IconButton(
+                  icon: const FaIcon(FontAwesomeIcons.linkedin),
+                  onPressed: () => _launchURL('https://linkedin.com/in/vedaangsharma2006'),
+                ),
+                IconButton(
+                  icon: const FaIcon(FontAwesomeIcons.github),
+                  onPressed: () => _launchURL('https://github.com/gtathelegend'),
+                ),
+                IconButton(
+                  icon: const Icon(Icons.mail),
+                  onPressed: () => _launchURL('mailto:vedaangsharma2006@gmail.com'),
+                ),
+              ],
+            ),
+            const SizedBox(height: 32),
             _buildDashboardCard(
               context,
               title: 'Weather',
@@ -35,6 +67,14 @@ class HomeScreen extends StatelessWidget {
         ),
       ),
     );
+  }
+
+  void _launchURL(String url) async {
+    if (await canLaunchUrl(Uri.parse(url))) {
+      await launchUrl(Uri.parse(url));
+    } else {
+      throw 'Could not launch $url';
+    }
   }
 
   Widget _buildDashboardCard(
