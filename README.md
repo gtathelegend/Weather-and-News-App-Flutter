@@ -15,7 +15,7 @@ A simple and elegant Flutter application that provides you with the latest weath
 
 | Home Screen | Weather Screen | News Screen |
 | :---: | :---: | :---: |
-| *Your screenshot here* | *Your screenshot here* | *Your screenshot here* |
+| ![Home Screen](assets/screenshots/home.png) | ![Weather Screen](assets/screenshots/weather.png) | ![News Screen](assets/screenshots/news.png) |
 
 ## Download
 
