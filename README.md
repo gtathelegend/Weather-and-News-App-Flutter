@@ -19,7 +19,7 @@ A simple and elegant Flutter application that provides you with the latest weath
 
 ## Download
 
-[Download the latest APK build here.](./build/app/outputs/flutter-apk/app-release.apk)
+[Download the latest APK build here.](https://github.com/gtathelegend/Weather-and-News-App-Flutter/releases/tag/v1.0.2)
 
 ## Getting Started
 
