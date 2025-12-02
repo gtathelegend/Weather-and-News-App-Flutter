@@ -33,7 +33,7 @@ To get a local copy up and running, follow these simple steps.
 
 1.  Clone the repo:
     ```sh
-    git clone https://github.com/your_username/your_repository.git
+    git clone https://github.com/gtathelegend/Weather-and-News-App-Flutter.git
     ```
 2.  Install packages:
     ```sh
